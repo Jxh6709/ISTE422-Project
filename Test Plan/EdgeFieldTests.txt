@@ -1,0 +1,60 @@
+-Sean Decker
+
+Call the constructor with a String that has the first token as an int and the second as a name string
+
+testGetNumFigure:
+	Should return the int value passed into the constructor
+	
+testGetName: 
+	Should return the name string passed into the constructor
+	
+testSetTableID:
+	Pass in an int value 
+	
+testGetTableID: 
+	Should return the value passed in when testing setTableID
+	
+testSetTableBound:
+	Pass in an int value
+	
+testGetTableBound:
+	Should return the value passed in when testing setTableBound
+	
+testSetFieldBound:
+	Pass in an int value
+	
+testGetFieldBound:
+	Should return the value passed in when testing setFieldBound
+	
+testSetDisallowNull:
+	Pass in a boolean value
+	
+testGetDisallowNull:
+	Should return the boolean value passed in when testing setDisallowNull
+	
+testSetIsPrimaryKey:
+	Pass in a boolean value
+	
+testGetIsPrimaryKey:
+	Should return the boolean value passed in when testing setIsPrimaryKey
+	
+testSetDefaultValue:
+	Pass in a string value
+	
+testGetDefaultValue:
+	Should return the string value passed in when testing setDefaultValue
+	
+testSetVarcharValue:
+	Pass in an int value that is greater than 0
+	
+testGetVarcharValue:
+	Should return the int value passed in when testing setVarcharValue
+	
+testSetDataType:
+	Pass in an int value that is >= 0 and < 3
+	
+testGetDataType:
+	Should return an int passed in when testing 
+	
+testGetStrDataType:
+	Should return a string value based off the value passed in for testingSetDataType
