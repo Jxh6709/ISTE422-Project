@@ -10,7 +10,7 @@ public class EdgeFieldTest
     @Before
     public void setUp() throws Exception
     {
-        testObj = new EdgeField("1|STUDENT");
+        testObj = new EdgeField("1|id");
         runner();
     }
 
@@ -47,7 +47,7 @@ public class EdgeFieldTest
     @Test
     public void testGetName()
     {
-        assertEquals("name was initialized to STUDENT", "STUDENT", testObj.getName());
+        assertEquals("name was initialized to id", "id", testObj.getName());
     }
 
     @Test

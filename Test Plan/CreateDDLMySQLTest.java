@@ -13,7 +13,9 @@ public class CreateDDLMySQLTest {
     // To test CreateDDLMySQL, EdgeTable and EdgeField need to be working?
     @Before
     public void setUp() throws Exception {
-        testOBJ = new CreateDDLMySQL();
+        EdgeTable[] inputTables = new EdgeTable[]{new EdgeTable("1|STUDENT")};
+        EdgeField[] inputFields = new EdgeField[]{new EdgeField("1|id")};
+        testOBJ = new CreateDDLMySQL(inputTables, inputFields);
         runner();
     }
 
