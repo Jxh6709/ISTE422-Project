@@ -58,7 +58,7 @@ public class CreateDDLMySQLTest {
 
     @Test
     public void testGetSQLString() {
-         assertEquals("Returns the result of createDDL",true,testObj.getSQLString());
+         assertEquals("Returns the result of createDDL","CREATE DATABSE testDb;\r\nUSE testDb;\r\nCREATE TABLE STUDENT(\n\tid VARCHAR(1)\r\n);",testObj.getSQLString());
     }
 
 } // end of class
