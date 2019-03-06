@@ -1,4 +1,5 @@
 // Kevin Gleason
+// Romero
 // 
 // List of items that should be tested
 
@@ -9,48 +10,29 @@ public class EdgeConvertCreateDDLTest {
 
     @Before
     public void setUp() throws Exception {
-        testObj = new EdgeConvertCreateDDL(){
-        // code completion added these, not sure if they would be needed for testing
-            @Override
-            public String getSQLString() {
-                return null;
-            }
-        
-            @Override
-            public String getProductName() {
-                return null;
-            }
-        
-            @Override
-            public String getDatabaseName() {
-                return null;
-            }
-        
-            @Override
-            public void createDDL() {
-                
-            }
-        };
+        testObj = new EdgeConvertCreateDDL(new EdgeTable[]{new EdgeTable("1|Student")}, new EdgeFields[]{new EdgeField("1|id")});
         runner();
     }
 
     public void runner() {
-
+        testInitialize();
+        testGetField();
+        testGetTable();
     }
 
     @Test
     public void testInitialize() {
-
+        testObj.initialize();
     }
 
     @Test
     public void testGetTable() {
-
+        assertEquals("Returns that the first table's name is 'Student'", "Student", testObj.getTable(0).getName());
     }
 
     @Test
     public void testGetField() {
-
+        assertEquals("Returns that the first column's name is 'id;", "id", testObj.getField(0).getName());
     }
 
 } // end of class
