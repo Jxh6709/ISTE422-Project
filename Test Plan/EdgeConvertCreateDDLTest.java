@@ -23,6 +23,7 @@ public class EdgeConvertCreateDDLTest {
     @Test
     public void testInitialize() {
         testObj.initialize();
+        assertEquals("The first table was initialized with a name of 'Student'", "Student", testObj.getTable(0).getName());
     }
 
     @Test
