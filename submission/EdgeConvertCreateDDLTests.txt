@@ -1,0 +1,12 @@
+-Sean Decker
+
+Call constructor and pass in an array with table name values, and an array with field name values.
+
+testInitialize:
+	Function should run without issues.
+	
+testGetTable:
+	Call function and then call getName function ontop. Should return the name of the table passed in the contructor.
+	
+testGetField:
+	Call function and then call getName function ontop. Should return the name of the field passed in the constructor.

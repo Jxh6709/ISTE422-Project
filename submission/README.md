@@ -2,6 +2,7 @@
 
 <!-- Navigate to the right folder -->
 <!--
+    See the test text files for the individual test plans.
 	Place folder on Desktop
 	Open terminal
 	Enter following command
