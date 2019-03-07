@@ -1,0 +1,21 @@
+-Sean Decker
+
+Call constructor and pass in an array with a table name value, and an array with a field name value.
+
+testCreateDLL:
+	Function should run with no errors.
+
+testConvertStrBooleanToInt:
+	Pass in a boolean. If true is passed in, should return 1. If false, should return 0.
+	
+testGenerateDatabaseName:
+	Function will prompt user to enter a string. Then, the function should return that string.
+	
+testGetDatabaseName:
+	Should return the string passed in when testing generateDatabaseName.
+	
+testGetProductName:
+	Should return the string "MySQL".
+	
+testGetSQLString:
+	Should return a toString version of the createDLL.

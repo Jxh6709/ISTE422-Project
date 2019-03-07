@@ -4,13 +4,16 @@
 // List of items that should be tested
 
 // Need imports
+import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
 
 public class EdgeConvertCreateDDLTest {
     EdgeConvertCreateDDL testObj;
 
     @Before
     public void setUp() throws Exception {
-        testObj = new EdgeConvertCreateDDL(new EdgeTable[]{new EdgeTable("1|Student")}, new EdgeFields[]{new EdgeField("1|id")});
+        testObj = new EdgeConvertCreateDDL( new EdgeTable[]{ new EdgeTable("1|Student") }, new EdgeField[]{ new EdgeField("1|id") } );
         runner();
     }
 

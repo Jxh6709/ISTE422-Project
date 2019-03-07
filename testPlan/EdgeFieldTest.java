@@ -1,4 +1,8 @@
 // Lorenzo Romero
+// Sean Decker - Updated 3/6:
+// Currently, non of the get functions work, as the set
+// finctions seem to be taking priority and running
+// first
 
 import static org.junit.Assert.*;
 
@@ -12,7 +16,7 @@ public class EdgeFieldTest
     @Before
     public void setUp() throws Exception
     {
-        testObj = new EdgeField("1|id");
+        testObj = new EdgeField("1|name");
         runner();
     }
 
@@ -24,8 +28,8 @@ public class EdgeFieldTest
         testSetTableID();
         testGetTableBound();
         testSetTableBound();
-        testGetFileBound();
-        testSetFileBound();
+        testGetFieldBound();
+        testSetFieldBound();
         testGetDisallowNull();
         testSetDisallowNull();
         testGetIsPrimaryKey();
@@ -42,20 +46,21 @@ public class EdgeFieldTest
 
     @Test
     public void testGetNumFigure()
-    {
-        assertEquals("numFigure was initialized to 1 so it should be 1", 1, testObj.getNumConnector());
+    { 
+      assertEquals("numFigure was initialized to 1 so it should be 1", 1, testObj.getNumFigure());
     }
 
     @Test
     public void testGetName()
-    {
-        assertEquals("name was initialized to id", "id", testObj.getName());
+    { 
+        assertEquals("name was initialized to name", "name", testObj.getName());
     }
 
     @Test
     public void testGetTableID()
     {
-        assertEquals("tableID was initialized to 0", 0, testObj.getTableID());
+      System.out.println(testObj.getTableID());
+      assertEquals("tableID was initialized to 0", 0, testObj.getTableID());
     }
 
     @Test
@@ -79,16 +84,16 @@ public class EdgeFieldTest
     }
 
     @Test
-    public void testGetFileBound()
+    public void testGetFieldBound()
     {
-        assertEquals("fileBound was initialized to 0", 0, testObj.getFileBound());
+	assertEquals("fieldBound was initialized to 0", 0, testObj.getFieldBound());
     }
 
     @Test
-    public void testSetFileBound()
+    public void testSetFieldBound()
     {
-        testObj.setFileBound(1);
-        assertEquals("fileBound should be what you set it to", 1, testObj.getFileBound());
+        testObj.setFieldBound(1);
+        assertEquals("fieldBound should be what you set it to", 1, testObj.getFieldBound());
     }
 
     @Test
@@ -141,8 +146,8 @@ public class EdgeFieldTest
     @Test
     public void testSetVarcharValue()
     {
-        testObj.setVarcharValue("test");
-        assertEquals("varcharValue should be what you set it to", "test", testObj.getVarcharValue());
+        testObj.setVarcharValue(1);
+        assertEquals("varcharValue should be what you set it to", 1, testObj.getVarcharValue());
     }
 
     @Test
@@ -162,13 +167,13 @@ public class EdgeFieldTest
     public void testGetStrDataType()
     {
         assertEquals("strDataType was initialized to ['Varchar', 'Boolean', 'Integer', 'Double']",
-                {"Varchar", "Boolean", "Integer", "Double"},
+                new String[]{"Varchar", "Boolean", "Integer", "Double"},
                 testObj.getStrDataType());
     }
 
     @Test
     public void testToString()
     {
-        assertEquals("toString should be correct", "1|STUDENT|1|1|1|true|true|test|test|1", testObj.toString());
+        assertEquals("toString should be correct", "1|name|1|1|1|1|1|true|true|test", testObj.toString());
     }
 }

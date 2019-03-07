@@ -1,0 +1,39 @@
+-Sean Decker
+
+Call the constructor with a String that has the first token as an int and the second as a name string
+
+testGetNumFigure:
+	Should return the int value passed into the constructor
+	
+testGetName: 
+	Should return the name string passed into the constructor
+	
+testAddRelatedTables:
+	Pass in an int (unsure how the int is related to different tables)
+	
+testGetRelatedTablesArray:
+	Should return an array including the table that was passed in
+	
+testGetRelatedFieldsArray:
+	Should return an array including the fields in the table 
+	
+testSetRelatedFields:
+	Pass in an int for the field index, and an int to set the value to
+	
+testAddNativeField:
+	Pass in an int
+	
+testGetNativeFieldsArray:
+	Should return an array with the value passed in
+	
+testMoveFieldUp:
+	Call function, and then call getRelatedFieldsArray. Confirm that the field has been moved up in the list
+	
+testMoveFieldDown:
+	Call function, and then call getRelatedFieldsArray. Confirm that the field has been moved down in the list
+	
+testMakeArrays:
+	Unsure how to test 
+	
+testToString:
+		Should return string

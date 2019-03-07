@@ -8,14 +8,14 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class CreateDDLMySQLTest {
-    CreateDDLMySQL testOBJ;
+    CreateDDLMySQL testObj;
 
     // To test CreateDDLMySQL, EdgeTable and EdgeField need to be working?
     @Before
     public void setUp() throws Exception {
         EdgeTable[] inputTables = new EdgeTable[]{new EdgeTable("1|STUDENT")};
         EdgeField[] inputFields = new EdgeField[]{new EdgeField("1|id")};
-        testOBJ = new CreateDDLMySQL(inputTables, inputFields);
+        testObj = new CreateDDLMySQL(inputTables, inputFields);
         runner();
     }
 
@@ -26,13 +26,12 @@ public class CreateDDLMySQLTest {
         testGetDatabaseName();
         testGetProductName();
         testGetSQLString();
-
     }
 
     // Majority of the functionality looks to be in here as it creates the database and tables
     @Test
     public void testCreateDDL() {
-         assertEquals("The table should be created from the given data",true,testObj.createDDL());
+         assertEquals("The table should be created from the given data",null,testObj.createDDL());
     }
 
     @Test
