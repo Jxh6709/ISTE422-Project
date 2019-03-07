@@ -21,16 +21,16 @@ public class EdgeTableTest
     {
         testGetNumFigure();
         testGetName();
-       // testAddRelatedTables();
+        testAddRelatedTables();
         testGetRelatedTablesArray();
-       // testSetRelatedFields(); 
+        testSetRelatedFields(); 
         testGetRelatedFieldsArray();
-       // testAddNativeField();
+        testAddNativeField();
         testGetNativeFieldsArray();
-       // testMoveFieldUp();
-       // testMoveFieldDown();
-       // testMakeArrays();
-       // testToString();
+        testMoveFieldUp();
+        testMoveFieldDown();
+       
+        testToString();
     }
 
     @Test
@@ -45,13 +45,13 @@ public class EdgeTableTest
         assertEquals("name was initialized to id", "id", testObj.getName());
     }
 
-   // @Test
-   // public void testAddRelatedTables()
-  //  {
-//	testObj2.addRelatedTable(1);
-//	testObj2.makeArrays();
-     //   assertEquals("Adds a value to the allRelatedTable", 1, testObj2.getRelatedTablesArray().length);
-   // }
+      @Test
+      public void testAddRelatedTables()
+      {
+	testObj2.makeArrays();
+	testObj2.addRelatedTable(1);
+        assertEquals("Adds a value to the allRelatedTable", 1, testObj2.getRelatedTablesArray().length);
+      }
 
     @Test
     public void testGetRelatedTablesArray()
@@ -59,11 +59,13 @@ public class EdgeTableTest
         assertEquals("returns nothing since the makeArray has yet to be called", null, testObj.getRelatedTablesArray());
     }
 
-   // @Test
-   // public void testSetRelatedFields()
-   // {
-     //   assertEquals("adds [3,5] to the related fields array", true, testObj.setRelatedField());
-   // }
+    @Test
+    public void testSetRelatedFields()
+    {
+	testObj2.makeArrays();
+	testObj2.setRelatedField(3,5);	
+       assertEquals("adds [3,5] to the related fields array", "[3,5]", testObj.getRelatedFieldsArray());
+    }
     
     @Test
     public void testGetRelatedFieldsArray()
@@ -71,11 +73,12 @@ public class EdgeTableTest
         assertEquals("returns nothing since the makeArray has yet to be called", null, testObj.getRelatedFieldsArray());
     }
 
-   // @Test
-   // public void testAddNativeField()
-   // {
-   //     assertEquals("Adds a value to alNativeFields", true, testObj.addNativeField(6));
-   // }
+    @Test
+    public void testAddNativeField()
+    {
+	testObj.addNativeField(6);
+        assertEquals("Adds a value to alNativeFields", "[6]", testObj.getNativeFieldsArray());
+    }
 
     @Test
     public void testGetNativeFieldsArray()
@@ -83,28 +86,27 @@ public class EdgeTableTest
         assertEquals("returns nothing since the makeArray has yet to be called", null, testObj.getNativeFieldsArray());
     }
 
-   // @Test
-   // public void testMoveFieldUp()
-   // {
-   //     assertEquals("Moves the field closer to the start of the list", true, testObj.moveFieldUp());
-   // }
+   @Test
+   public void testMoveFieldUp()
+   {
+	testObj.makeArrays();
+	testObj.moveFieldUp(1);
+        assertEquals("Moves the field closer to the start of the list", null, testObj.getRelatedFieldsArray());
+   }
 
-   // @Test
-   // public void testMoveFieldDown()
-   // {
-   //     assertEquals("Moves the field to the bottom of the list", true, testObj.moveFieldDown());
-   // }
+   @Test
+   public void testMoveFieldDown()
+   {
+	testObj.makeArrays();
+	testObj.moveFieldDown(1);
+        assertEquals("Moves the field closer to the end of the list", null, testObj.getRelatedFieldsArray());
+   }
 
-   // @Test
-   // public void testMakeArrays()
-   // {
-   //     assertEquals("Converts the ArrayLists into nativeFields and relatedTables", true, testObj.makeArrays());
-   // }
-
-   // @Test
-   // public void testToString()
-   // {
-   //     assertEquals("The full table in a string", "Table: 1 Tablename: id NativeFields: 6 RelatedTables: 2 RelatedFields: 3|5", testObj.toString());
-   // }
+   @Test
+   public void testToString()
+   {
+	String s = testObj.toString();
+       assertEquals("The full table in a string", true, testObj.toString().length() > 0);
+   }
 
 }
