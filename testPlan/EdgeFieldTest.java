@@ -59,7 +59,7 @@ public class EdgeFieldTest
     @Test
     public void testGetTableID()
     {
-      System.out.println(testObj.getTableID());
+      testObj.setTableID(0);
       assertEquals("tableID was initialized to 0", 0, testObj.getTableID());
     }
 
@@ -73,6 +73,7 @@ public class EdgeFieldTest
     @Test
     public void testGetTableBound()
     {
+	testObj.setTableBound(0);
         assertEquals("tableBound was initialized to 0", 0, testObj.getTableBound());
     }
 
@@ -86,6 +87,7 @@ public class EdgeFieldTest
     @Test
     public void testGetFieldBound()
     {
+	testObj.setFieldBound(0);
 	assertEquals("fieldBound was initialized to 0", 0, testObj.getFieldBound());
     }
 
@@ -99,6 +101,7 @@ public class EdgeFieldTest
     @Test
     public void testGetDisallowNull()
     {
+	testObj.setDisallowNull(false);
         assertEquals("disallowNull was initialized to false", false, testObj.getDisallowNull());
     }
 
@@ -112,6 +115,7 @@ public class EdgeFieldTest
     @Test
     public void testGetIsPrimaryKey()
     {
+	testObj.setIsPrimaryKey(false);
         assertEquals("isPrimaryKey was initialized to false", false, testObj.getIsPrimaryKey());
     }
 
@@ -125,6 +129,7 @@ public class EdgeFieldTest
     @Test
     public void testGetDefaultValue()
     {
+	testObj.setDefaultValue("");
         assertEquals("defaultValue was initialized to ''", "", testObj.getDefaultValue());
     }
 
@@ -153,6 +158,7 @@ public class EdgeFieldTest
     @Test
     public void testGetDataType()
     {
+	testObj.setDataType(0);
         assertEquals("dataType was initialized to 0", 0, testObj.getDataType());
     }
 
