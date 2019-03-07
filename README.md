@@ -1,7 +1,16 @@
 # ISTE422-Project
 
+<!-- Navigate to the right folder -->
+<!--
+	Place folder on Desktop
+	Open terminal
+	Enter following command
+-->
+
+cd Desktop/ISTE422-Project/testPlan	
 
 
+<!-- Enter the following commands to compile and then run the programs -->
 
 <!-- For CreateDDLMySQLTest.java -->
 
@@ -11,11 +20,11 @@ java -cp .:junit-4.12.jar:hamcrest-core-1.3.jar \org.junit.runner.JUnitCore Crea
 
 
 
-<!-- For EdgConvertCreateDDLTest.java -->
+<!-- For EdgeConvertCreateDDLTest.java -->
 
-javac -cp .:junit-4.12.jar:hamcrest-core-1.3.jar \EdgConvertCreateDDLTest.java
+javac -cp .:junit-4.12.jar:hamcrest-core-1.3.jar \EdgeConvertCreateDDLTest.java
 
-java -cp .:junit-4.12.jar:hamcrest-core-1.3.jar \org.junit.runner.JUnitCore EdgConvertCreateDDLTest
+java -cp .:junit-4.12.jar:hamcrest-core-1.3.jar \org.junit.runner.JUnitCore EdgeConvertCreateDDLTest
 
 
 
