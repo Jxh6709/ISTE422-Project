@@ -8,7 +8,7 @@
 	Enter following command
 -->
 
-cd Desktop/submission
+cd Desktop/ISTE422-Project/testPlan	
 
 
 <!-- Enter the following commands to compile and then run the programs -->
