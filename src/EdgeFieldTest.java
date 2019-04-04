@@ -1,7 +1,7 @@
-// Lorenzo Romero
+package src;// Lorenzo Romero
 // Sean Decker - Updated 3/6:
 // Currently, non of the get functions work, as the set
-// finctions seem to be taking priority and running
+// fictions seem to be taking priority and running
 // first
 
 import static org.junit.Assert.*;
@@ -11,19 +11,22 @@ import org.junit.Test;
 
 public class EdgeFieldTest
 {
-    EdgeField testObj;
+    private EdgeField testObj;
 
     @Before
-    public void setUp() throws Exception
-    {
+    public void setUp(String i) {
         testObj = new EdgeField("1|name");
-        runner();
+
+        int id = Integer.valueOf(i.split("\\|")[0]);
+        String name = i.split("\\|")[1];
+
+        runner(id, name);
     }
 
-    public void runner()
+    public void runner(int id, String name)
     {
-        testGetNumFigure();
-        testGetName();
+        testGetNumFigure(id);
+        testGetName(name);
         testGetTableID();
         testSetTableID();
         testGetTableBound();
@@ -45,15 +48,15 @@ public class EdgeFieldTest
     }
 
     @Test
-    public void testGetNumFigure()
+    public void testGetNumFigure(int id)
     { 
-      assertEquals("numFigure was initialized to 1 so it should be 1", 1, testObj.getNumFigure());
+      assertEquals("numFigure was initialized to 1 so it should be 1", id, testObj.getNumFigure());
     }
 
     @Test
-    public void testGetName()
+    public void testGetName(String name)
     { 
-        assertEquals("name was initialized to name", "name", testObj.getName());
+        assertEquals("name was initialized to name", name, testObj.getName());
     }
 
     @Test
@@ -99,27 +102,27 @@ public class EdgeFieldTest
     @Test
     public void testGetDisallowNull()
     {
-        assertEquals("disallowNull was initialized to false", false, testObj.getDisallowNull());
+        assertFalse("disallowNull was initialized to false", testObj.getDisallowNull());
     }
 
     @Test
     public void testSetDisallowNull()
     {
         testObj.setDisallowNull(true);
-        assertEquals("disallowNull should be what you set it to", true, testObj.getDisallowNull());
+        assertTrue("disallowNull should be what you set it to", testObj.getDisallowNull());
     }
 
     @Test
     public void testGetIsPrimaryKey()
     {
-        assertEquals("isPrimaryKey was initialized to false", false, testObj.getIsPrimaryKey());
+        assertFalse("isPrimaryKey was initialized to false", testObj.getIsPrimaryKey());
     }
 
     @Test
     public void testSetIsPrimaryKey()
     {
         testObj.setIsPrimaryKey(true);
-        assertEquals("isPrimaryKey should be what you set it to", true, testObj.getIsPrimaryKey());
+        assertTrue("isPrimaryKey should be what you set it to", testObj.getIsPrimaryKey());
     }
 
     @Test
@@ -166,9 +169,10 @@ public class EdgeFieldTest
     @Test
     public void testGetStrDataType()
     {
-        assertEquals("strDataType was initialized to ['Varchar', 'Boolean', 'Integer', 'Double']",
-                new String[]{"Varchar", "Boolean", "Integer", "Double"},
-                testObj.getStrDataType());
+        String[] array = new String[]{"Varchar", "Boolean", "Integer", "Double"};
+        assertArrayEquals("strDataType was initialized to ['Varchar', 'Boolean', 'Integer', 'Double']",
+                array,
+                EdgeField.getStrDataType());
     }
 
     @Test

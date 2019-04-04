@@ -13,32 +13,32 @@ cd Desktop/ISTE422-Project/testPlan
 
 <!-- Enter the following commands to compile and then run the programs -->
 
-<!-- For CreateDDLMySQLTest.java -->
+<!-- For src.CreateDDLMySQLTest.java -->
 
-javac -cp .:junit-4.12.jar:hamcrest-core-1.3.jar \CreateDDLMySQLTest.java
+javac -cp .:junit-4.12.jar:hamcrest-core-1.3.jar \src.CreateDDLMySQLTest.java
 
-java -cp .:junit-4.12.jar:hamcrest-core-1.3.jar \org.junit.runner.JUnitCore CreateDDLMySQLTest
-
-
-
-<!-- For EdgeConvertCreateDDLTest.java -->
-
-javac -cp .:junit-4.12.jar:hamcrest-core-1.3.jar \EdgeConvertCreateDDLTest.java
-
-java -cp .:junit-4.12.jar:hamcrest-core-1.3.jar \org.junit.runner.JUnitCore EdgeConvertCreateDDLTest
+java -cp .:junit-4.12.jar:hamcrest-core-1.3.jar \org.junit.runner.JUnitCore src.CreateDDLMySQLTest
 
 
 
-<!-- For EdgeFieldTest.java -->
+<!-- For src.EdgeConvertCreateDDLTest.java -->
 
-javac -cp .:junit-4.12.jar:hamcrest-core-1.3.jar \EdgeFieldTest.java
+javac -cp .:junit-4.12.jar:hamcrest-core-1.3.jar \src.EdgeConvertCreateDDLTest.java
 
-java -cp .:junit-4.12.jar:hamcrest-core-1.3.jar \org.junit.runner.JUnitCore EdgeFieldTest
+java -cp .:junit-4.12.jar:hamcrest-core-1.3.jar \org.junit.runner.JUnitCore src.EdgeConvertCreateDDLTest
 
 
 
-<!-- For EdgeTableTest.java -->
+<!-- For src.EdgeFieldTest.java -->
 
-javac -cp .:junit-4.12.jar:hamcrest-core-1.3.jar \EdgeTableTest.java
+javac -cp .:junit-4.12.jar:hamcrest-core-1.3.jar \src.EdgeFieldTest.java
 
-java -cp .:junit-4.12.jar:hamcrest-core-1.3.jar \org.junit.runner.JUnitCore EdgeTableTest
+java -cp .:junit-4.12.jar:hamcrest-core-1.3.jar \org.junit.runner.JUnitCore src.EdgeFieldTest
+
+
+
+<!-- For src.EdgeTableTest.java -->
+
+javac -cp .:junit-4.12.jar:hamcrest-core-1.3.jar \src.EdgeTableTest.java
+
+java -cp .:junit-4.12.jar:hamcrest-core-1.3.jar \org.junit.runner.JUnitCore src.EdgeTableTest

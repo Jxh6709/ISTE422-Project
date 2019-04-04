@@ -1,4 +1,4 @@
-// Kevin Gleason
+package src;// Kevin Gleason
 // Joshua Haber
 // List of items that should be tested
 
@@ -30,8 +30,16 @@ public class CreateDDLMySQLTest {
 
     // Majority of the functionality looks to be in here as it creates the database and tables
     @Test
-    public void testCreateDDL() {
-         assertEquals("The table should be created from the given data",null,testObj.createDDL());
+    public void testCreateDDL()
+    {
+         try
+         {
+             testObj.createDDL();
+         }
+         catch(Exception e)
+         {
+             e.printStackTrace();
+         }
     }
 
     @Test

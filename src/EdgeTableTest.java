@@ -1,4 +1,4 @@
-// Joshua D. Haber
+package src;// Joshua D. Haber
 
 import static org.junit.Assert.*;
 
@@ -11,16 +11,20 @@ public class EdgeTableTest
     EdgeTable testObj2;
 
     @Before
-    public void setUp() throws Exception
+    public void setUp(String i) throws Exception
     {
-        testObj = new EdgeTable("1|id");
-        runner();
+        testObj = new EdgeTable(i);
+
+        int id = Integer.valueOf(i.split("|")[0]);
+        String name = i.split("|")[1];
+
+        runner(id, name);
     }
 
-    public void runner()
+    public void runner(int id, String name)
     {
-        testGetNumFigure();
-        testGetName();
+        testGetNumFigure(id);
+        testGetName(name);
         testAddRelatedTables();
         testGetRelatedTablesArray();
         testSetRelatedFields(); 
@@ -34,15 +38,15 @@ public class EdgeTableTest
     }
 
     @Test
-    public void testGetNumFigure()
+    public void testGetNumFigure(int id)
     {
-        assertEquals("numFigure was initialized to 1 so it should be 1", 1, testObj.getNumFigure());
+        assertEquals("numFigure was initialized to 1 so it should be 1", id, testObj.getNumFigure());
     }
 
     @Test
-    public void testGetName()
+    public void testGetName(String e)
     {
-        assertEquals("name was initialized to id", "id", testObj.getName());
+        assertEquals("name was initialized to id", e, testObj.getName());
     }
 
       @Test
