@@ -1,4 +1,3 @@
-// Sean Decker: Edited file for EX07 on 4/9
 import org.junit.internal.TextListener;
 import org.junit.runner.JUnitCore;
 import java.io.BufferedReader;

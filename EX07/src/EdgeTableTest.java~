@@ -1,4 +1,5 @@
-// Sean Decker: Edited for EX07 on 4/9
+// Joshua D. Haber
+
 import static org.junit.Assert.*;
 
 import org.junit.Before;
