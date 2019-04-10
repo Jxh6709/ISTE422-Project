@@ -9,13 +9,16 @@ public class EdgeTableTest
     EdgeTable testObj;
     EdgeTable testObj2;
 
+    private int id;
+    private String name;
+
     @Before
     public void setUp(String i) throws Exception {
 		
 		testObj = new EdgeTable(i);
 		
-    	int id = Integer.valueOf(i.split("\\|")[0]);
-        String name = i.split("\\|")[1];
+    	this.id = Integer.valueOf(i.split("\\|")[0]);
+        this.name = i.split("\\|")[1];
    
         runner(id,name);
         
@@ -47,13 +50,13 @@ public class EdgeTableTest
     @Test
     public void testGetNumFigure(int id)
     {
-        assertEquals("numFigure was initialized to 1 so it should be 1", id, testObj.getNumFigure());
+        assertEquals("numFigure was initialized to " + this.id + " so it should be " + this.id, id, testObj.getNumFigure());
     }
 
     @Test
     public void testGetName(String name)
     {
-        assertEquals("name was initialized to name", name, testObj.getName());
+        assertEquals("name was initialized to " + this.name, name, testObj.getName());
     }
 
    // @Test
