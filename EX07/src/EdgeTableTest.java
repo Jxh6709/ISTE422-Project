@@ -12,7 +12,7 @@ public class EdgeTableTest
     @Before
     public void setUp(String i) throws Exception {
 		
-		testObj = new EdgeTable("1|name");
+		testObj = new EdgeTable(i);
 		
     	int id = Integer.valueOf(i.split("\\|")[0]);
         String name = i.split("\\|")[1];

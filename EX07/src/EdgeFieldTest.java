@@ -12,7 +12,7 @@ public class EdgeFieldTest
 	@Before
 	public void setUp(String i) throws Exception {
 		
-		testObj = new EdgeField("1|name");
+		testObj = new EdgeField(i);
 		
     	int id = Integer.valueOf(i.split("\\|")[0]);
         String name = i.split("\\|")[1];
