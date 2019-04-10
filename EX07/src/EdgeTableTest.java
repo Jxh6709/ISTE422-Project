@@ -50,13 +50,13 @@ public class EdgeTableTest
     @Test
     public void testGetNumFigure(int id)
     {
-        assertEquals("numFigure was initialized to " + this.id + " so it should be " + this.id, id, testObj.getNumFigure());
+        assertEquals("numFigure was initialized to " + this.id + " so it should be " + this.id, this.id, testObj.getNumFigure());
     }
 
     @Test
     public void testGetName(String name)
     {
-        assertEquals("name was initialized to " + this.name, name, testObj.getName());
+        assertEquals("name was initialized to " + this.name, this.name, testObj.getName());
     }
 
    // @Test
