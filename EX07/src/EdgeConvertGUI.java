@@ -54,7 +54,7 @@ public class EdgeConvertGUI {
    static DefaultListModel dlmDTTablesAll, dlmDTFieldsTablesAll;
    static JMenuBar jmbDTMenuBar;
    static JMenu jmDTFile, jmDTOptions, jmDTHelp;
-   static JMenuItem jmiDTOpenEdge, jmiDTOpenSave, jmiDTSave, jmiDTSaveAs, jmiDTExit, jmiDTOptionsOutputLocation, jmiDTOptionsShowProducts, jmiDTHelpAbout;
+   static JMenuItem jmiDTOpenEdge, jmiDTOpenSave, jmiDTSave, jmiDTSaveAs, jmiDTExit, jmiDTOptionsOutputLocation, jmiDTOptionsShowProducts, jmiDTHelpAbout, jmiDTHelpUsing;
    
    //Define Relations screen objects
    static JFrame jfDR;
@@ -146,6 +146,10 @@ public class EdgeConvertGUI {
       jmiDTHelpAbout.setMnemonic(KeyEvent.VK_A);
       jmiDTHelpAbout.addActionListener(menuListener);
       jmDTHelp.add(jmiDTHelpAbout);
+	  
+	  jmiDTHelpUsing = new JMenuItem("How To Use");
+	  jmiDTHelpUsing.addActionListener(menuListener);
+	  jmDTHelp.add(jmiDTHelpUsing);
       
       jfcEdge = new JFileChooser();
       jfcOutputDir = new JFileChooser();
@@ -1274,9 +1278,24 @@ public class EdgeConvertGUI {
          
          if ((ae.getSource() == jmiDTHelpAbout) || (ae.getSource() == jmiDRHelpAbout)) {
             JOptionPane.showMessageDialog(null, "EdgeConvert ERD To DDL Conversion Tool\n" +
-                                                "by Stephen A. Capperell\n" +
-                                                "� 2007-2008");
+                                                "by Stephen A. Capperell, et. al.\n" +
+                                                "(c) 2007-2008");
          }
+		 
+		 if(ae.getSource() == jmiDTHelpUsing)
+		 {
+			 JOptionPane.showMessageDialog(null, "How To Use:\n" + 
+												 "1) Go to File > Open Edge File and select your edge file (ending in .edg) in the file selector\n" +
+												 "\t The table names will appear in the left-hand column\n" + 
+												 "2) Select a table name you wish to edit\n" + 
+												 "\t The field names will appear in the right-hand column" + 
+												 "3) Select the field you would like to edit" + 
+												 "4) Make the desired changes to the data type, size, and indexes in the fields located to the right of the columns" + 
+												 "5) Define any column relations using the 'Define Relations' button\n" + 
+												 "\t be sure that the two tables you are relating are selected in the left-hand column, this can be done by using Ctrl + click on the table names you want to use\n" +
+												 "\t Click the 'Bind/Unbind' button to finalize your changes\n" +
+												 "6) When you've finished, click 'Create DDL' to save your changes to the output file");
+		 }
       } // EdgeMenuListener.actionPerformed()
    } // EdgeMenuListener
 } // EdgeConvertGUI
