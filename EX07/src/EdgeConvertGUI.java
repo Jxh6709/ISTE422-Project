@@ -54,7 +54,7 @@ public class EdgeConvertGUI {
    static DefaultListModel dlmDTTablesAll, dlmDTFieldsTablesAll;
    static JMenuBar jmbDTMenuBar;
    static JMenu jmDTFile, jmDTOptions, jmDTHelp;
-   static JMenuItem jmiDTOpenEdge, jmiDTOpenSave, jmiDTSave, jmiDTSaveAs, jmiDTExit, jmiDTOptionsOutputLocation, jmiDTOptionsShowProducts, jmiDTHelpAbout, jmiDTHelpUsing;
+   static JMenuItem jmiDTOpenEdge, jmiDTOpenSave, jmiDTSave, jmiDTSaveAs, jmiDTExit, jmiDTOptionsOutputLocation, jmiDTOptionsShowProducts, jmiDTHelpAbout, jmiDTHelpUsing, jmiDTHelpTroubleshooting;
    
    //Define Relations screen objects
    static JFrame jfDR;
@@ -150,6 +150,10 @@ public class EdgeConvertGUI {
 	  jmiDTHelpUsing = new JMenuItem("How To Use");
 	  jmiDTHelpUsing.addActionListener(menuListener);
 	  jmDTHelp.add(jmiDTHelpUsing);
+	  
+	  jmiDTHelpTroubleshooting = new JMenuItem("Troubleshooting");
+	  jmiDTHelpTroubleshooting.addActionListener(menuListener);
+	  jmDTHelp.add(jmiDTHelpTroubleshooting);
       
       jfcEdge = new JFileChooser();
       jfcOutputDir = new JFileChooser();
@@ -1296,6 +1300,12 @@ public class EdgeConvertGUI {
 												 "\t Click the 'Bind/Unbind' button to finalize your changes\n" +
 												 "6) When you've finished, click 'Create DDL' to save your changes to the output file");
 		 }
+		 
+		 if(ae.getSource() == jmiDTHelpTroubleshooting)
+		 {
+			 JOptionPane.showMessageDialog(null, "Troubleshooting steps...");
+		 }
+		 
       } // EdgeMenuListener.actionPerformed()
    } // EdgeMenuListener
 } // EdgeConvertGUI
