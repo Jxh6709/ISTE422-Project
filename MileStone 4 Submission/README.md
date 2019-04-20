@@ -1,0 +1,1 @@
+To run this program, double click the "EdgeConvertProgram.jar" file. 
