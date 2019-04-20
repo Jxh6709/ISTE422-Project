@@ -1303,7 +1303,10 @@ public class EdgeConvertGUI {
 		 
 		 if(ae.getSource() == jmiDTHelpTroubleshooting)
 		 {
-			 JOptionPane.showMessageDialog(null, "Troubleshooting steps...");
+			 JOptionPane.showMessageDialog(null, "Just exit the program. All you have to do is click the 'X' in the top right.\n "
+			 		+ "Wait why am I explaining this? You should know how to exit a program, right? I mean how would you even be here if you didn't?\n "
+			 		+ "If you don't know how to exit a simple program then you should get help. Like serious, personal help.\n "
+			 		+ "That's just embarrasing and you should feel bad. Are you still reading this? Just exit the program already!");
 		 }
 		 
       } // EdgeMenuListener.actionPerformed()
