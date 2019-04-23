@@ -940,6 +940,7 @@ public class EdgeConvertGUI {
 
       if (returnVal == JFileChooser.APPROVE_OPTION) {
          outputDir = jfcOutputDir.getSelectedFile();
+         alProductNames.add(outputDir);
       }
       
       getOutputClasses();
