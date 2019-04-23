@@ -1292,11 +1292,12 @@ public class EdgeConvertGUI {
 												 "1) Go to File > Open Edge File and select your edge file (ending in .edg) in the file selector\n" +
 												 "\t The table names will appear in the left-hand column\n" + 
 												 "2) Select a table name you wish to edit\n" + 
-												 "\t The field names will appear in the right-hand column" + 
-												 "3) Select the field you would like to edit" + 
-												 "4) Make the desired changes to the data type, size, and indexes in the fields located to the right of the columns" + 
+												 "\t The field names will appear in the right-hand column\n" + 
+												 "3) Select the field you would like to edit\n" + 
+												 "4) Make the desired changes to the data type, size, and indexes in the fields located to the right of the columns\n" + 
 												 "5) Define any column relations using the 'Define Relations' button\n" + 
-												 "\t be sure that the two tables you are relating are selected in the left-hand column, this can be done by using Ctrl + click on the table names you want to use\n" +
+												 "\t be sure that the two tables you are relating are selected in the left-hand column,\n" +
+                                     "\t this can be done by using Ctrl + click on the table names you want to use\n" +
 												 "\t Click the 'Bind/Unbind' button to finalize your changes\n" +
 												 "6) When you've finished, click 'Create DDL' to save your changes to the output file");
 		 }
