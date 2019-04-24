@@ -1,3 +1,5 @@
+package src;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -940,9 +942,14 @@ public class EdgeConvertGUI {
 
       if (returnVal == JFileChooser.APPROVE_OPTION) {
          outputDir = jfcOutputDir.getSelectedFile();
-         alProductNames.add(outputDir);
       }
       
+      //someone forgot to account for the current directory 
+      if (returnVal == JFileChooser.DIRECTORIES_ONLY) {  
+         //and luckily there is a method to do this             
+         jfcOutputDir.getCurrentDirectory();
+
+      } 
       getOutputClasses();
 
       if (alProductNames.size() == 0) {
@@ -988,6 +995,7 @@ public class EdgeConvertGUI {
                continue; //ignore all files that are not .class files
             }
             resultClass = Class.forName(resultFiles[i].getName().substring(0, resultFiles[i].getName().lastIndexOf(".")));
+            System.out.println("RESULT CLASS " + resultClass);
             if (resultClass.getSuperclass().getName().equals("EdgeConvertCreateDDL")) { //only interested in classes that extend EdgeConvertCreateDDL
                if (parseFile == null && saveFile == null) {
                   conResultClass = resultClass.getConstructor(paramTypesNull);
@@ -1146,9 +1154,6 @@ public class EdgeConvertGUI {
          }
          System.exit(0); //No was selected
       }
-      public void saveAs( ) {
-         System.out.println("TODO SAVE AS");
-      }
    }
    
    class CreateDDLButtonListener implements ActionListener {
@@ -1202,7 +1207,15 @@ public class EdgeConvertGUI {
                truncatedFilename = parseFile.getName().substring(parseFile.getName().lastIndexOf(File.separator) + 1);
                jfDT.setTitle(DEFINE_TABLES + " - " + truncatedFilename);
                jfDR.setTitle(DEFINE_RELATIONS + " - " + truncatedFilename);
-            } else {
+            } 
+            //once again we forgot to account for the directories
+            else if (returnVal == JFileChooser.DIRECTORIES_ONLY) {
+               //in this case we need to change to the current directory
+               jfcOutputDir.changeToParentDirectory();
+               //go back to default Text
+               jfcOutputDir.setApproveButtonText("Default");
+            }
+            else {
                return;
             }
             dataSaved = true;
