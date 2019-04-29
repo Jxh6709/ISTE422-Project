@@ -1,5 +1,3 @@
-package src;
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -1029,41 +1027,41 @@ public class EdgeConvertGUI {
    
    private String getSQLStatements() {
       String strSQLString = "";
-//       String response = (String)JOptionPane.showInputDialog(
-//                     null,
-//                     "Select a product:",
-//                     "Create DDL",
-//                     JOptionPane.PLAIN_MESSAGE,
-//                     null,
-//                     productNames,
-//                     null);
-//                     
-//       if (response == null) {
-//          return EdgeConvertGUI.CANCELLED;
-//       }
-//       
-//       int selected;
+       String response = (String)JOptionPane.showInputDialog(
+                     null,
+                     "Select a product:",
+                     "Create DDL",
+                     JOptionPane.PLAIN_MESSAGE,
+                     null,
+                     productNames,
+                     null);
+
+       if (response == null) {
+          return EdgeConvertGUI.CANCELLED;
+       }
+
+       int selected;
       System.out.println(productNames);
-      // for (selected = 0; selected < productNames.length; selected++) {
-      //    if (response.equals(productNames[selected])) {
-      //       break;
-      //    }
-      // }
+       for (selected = 0; selected < productNames.length; selected++) {
+          if (response.equals(productNames[selected])) {
+             break;
+          }
+       }
       System.out.println(objSubclasses);
 
-      // try {
-      //    Class selectedSubclass = objSubclasses[selected].getClass();
-      //    Method getSQLString = selectedSubclass.getMethod("getSQLString", null);
-      //    Method getDatabaseName = selectedSubclass.getMethod("getDatabaseName", null);
-      //    strSQLString = (String)getSQLString.invoke(objSubclasses[selected], null);
-      //    databaseName = (String)getDatabaseName.invoke(objSubclasses[selected], null);
-      // } catch (IllegalAccessException iae) {
-      //    iae.printStackTrace();
-      // } catch (NoSuchMethodException nsme) {
-      //    nsme.printStackTrace();
-      // } catch (InvocationTargetException ite) {
-      //    ite.printStackTrace();
-      // }
+       try {
+          Class selectedSubclass = objSubclasses[selected].getClass();
+          Method getSQLString = selectedSubclass.getMethod("getSQLString", null);
+          Method getDatabaseName = selectedSubclass.getMethod("getDatabaseName", null);
+          strSQLString = (String)getSQLString.invoke(objSubclasses[selected], null);
+          databaseName = (String)getDatabaseName.invoke(objSubclasses[selected], null);
+       } catch (IllegalAccessException iae) {
+          iae.printStackTrace();
+       } catch (NoSuchMethodException nsme) {
+          nsme.printStackTrace();
+       } catch (InvocationTargetException ite) {
+          ite.printStackTrace();
+       }
 
       return strSQLString;
    }
@@ -1071,16 +1069,16 @@ public class EdgeConvertGUI {
    private void writeSQL(String output) {
       jfcEdge.resetChoosableFileFilters();
       String str;
-      // if (parseFile != null) {
-      //    outputFile = new File(parseFile.getAbsolutePath().substring(0, (parseFile.getAbsolutePath().lastIndexOf(File.separator) + 1)) + databaseName + ".sql");
-      // } else {
-      //    outputFile = new File(saveFile.getAbsolutePath().substring(0, (saveFile.getAbsolutePath().lastIndexOf(File.separator) + 1)) + databaseName + ".sql");
-      // }
-      // if (databaseName.equals("")) {
-      //    return;
-      // }
-      String fileName = "result.sql";
-      outputFile = new File(fileName);
+       if (parseFile != null) {
+          outputFile = new File(parseFile.getAbsolutePath().substring(0, (parseFile.getAbsolutePath().lastIndexOf(File.separator) + 1)) + databaseName + ".sql");
+       } else {
+          outputFile = new File(saveFile.getAbsolutePath().substring(0, (saveFile.getAbsolutePath().lastIndexOf(File.separator) + 1)) + databaseName + ".sql");
+       }
+       if (databaseName.equals("")) {
+          return;
+       }
+//      String fileName = "result.sql";
+//      outputFile = new File(fileName);
       jfcEdge.setSelectedFile(outputFile);
       int returnVal = jfcEdge.showSaveDialog(null);
       if (returnVal == JFileChooser.APPROVE_OPTION) {
@@ -1164,11 +1162,11 @@ public class EdgeConvertGUI {
    class CreateDDLButtonListener implements ActionListener {
       public void actionPerformed(ActionEvent ae) {
          //shit is annoying so i commented it out
-         // while (outputDir == null) {
-         //    JOptionPane.showMessageDialog(null, "You have not selected a path that contains valid output definition files yet.\nPlease select a path now.");
-         //    setOutputDir();
-         // }
-         // getOutputClasses(); //in case outputDir was set before a file was loaded and EdgeTable/EdgeField objects created
+          if (outputDir == null) {
+             JOptionPane.showMessageDialog(null, "You have not selected a path that contains valid output definition files yet.\nPlease select a path now.");
+             setOutputDir();
+          }
+          getOutputClasses(); //in case outputDir was set before a file was loaded and EdgeTable/EdgeField objects created
          sqlString = getSQLStatements();
          if (sqlString.equals(EdgeConvertGUI.CANCELLED)) {
             return;

@@ -1,5 +1,3 @@
-package src;
-
 public abstract class EdgeConvertCreateDDL {
    static String[] products = {"MySQL"};
    protected EdgeTable[] tables; //master copy of EdgeTable objects
