@@ -1077,8 +1077,6 @@ public class EdgeConvertGUI {
        if (databaseName.equals("")) {
           return;
        }
-//      String fileName = "result.sql";
-//      outputFile = new File(fileName);
       jfcEdge.setSelectedFile(outputFile);
       int returnVal = jfcEdge.showSaveDialog(null);
       if (returnVal == JFileChooser.APPROVE_OPTION) {
@@ -1161,7 +1159,12 @@ public class EdgeConvertGUI {
    
    class CreateDDLButtonListener implements ActionListener {
       public void actionPerformed(ActionEvent ae) {
-         //shit is annoying so i commented it out
+         //make sure we have an edge file before continuinh
+         if (tables.length == 0) {
+            JOptionPane.showMessageDialog(null, "No .edg file exists. Please Select One and Try Again");
+            return;
+         }
+         //if prevents an infinite loop
           if (outputDir == null) {
              JOptionPane.showMessageDialog(null, "You have not selected a path that contains valid output definition files yet.\nPlease select a path now.");
              setOutputDir();

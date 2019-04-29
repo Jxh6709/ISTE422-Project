@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f3a84a5-efe5-419d-abca-116d01f9fd50" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/CreateDDLMySQL.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/CreateDDLMySQL.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/EdgeConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/EdgeConnector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/EdgeConvertCreateDDL.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/EdgeConvertCreateDDL.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/EdgeConvertFileParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/EdgeConvertFileParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/EdgeConvertGUI$CreateDDLButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/EdgeConvertGUI$CreateDDLButtonListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/EdgeConvertGUI$EdgeMenuListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/EdgeConvertGUI$EdgeMenuListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/EdgeConvertGUI$EdgeRadioButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/EdgeConvertGUI$EdgeRadioButtonListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/EdgeConvertGUI$EdgeWindowListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/EdgeConvertGUI$EdgeWindowListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/EdgeConvertGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/EdgeConvertGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/EdgeField.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/EdgeField.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/EdgeTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/EdgeTable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ExampleFileFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ExampleFileFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/RunEdgeConvert.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/RunEdgeConvert.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreateDDLMySQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateDDLMySQL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EdgeConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EdgeConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EdgeConvertCreateDDL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EdgeConvertCreateDDL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EdgeConvertFileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EdgeConvertFileParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/EdgeConvertGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EdgeConvertGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EdgeField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EdgeField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EdgeTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EdgeTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ExampleFileFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExampleFileFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RunEdgeConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RunEdgeConvert.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,8 +21,40 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/EdgeConvertGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="1079" column="8" selection-start-line="1079" selection-start-column="8" selection-end-line="1080" selection-end-column="40" />
+            <state relative-caret-position="193">
+              <caret line="1165" column="10" selection-start-line="1165" selection-start-column="10" selection-end-line="1165" selection-end-column="10" />
+              <folding>
+                <element signature="e#8134#8442#0" expanded="true" />
+                <element signature="e#8441#8442#0" expanded="true" />
+                <element signature="e#8867#9807#0" expanded="true" />
+                <element signature="e#9806#9807#0" expanded="true" />
+                <element signature="e#9999#11904#0" expanded="true" />
+                <element signature="e#11903#11904#0" expanded="true" />
+                <element signature="e#12090#12850#0" expanded="true" />
+                <element signature="e#12849#12850#0" expanded="true" />
+                <element signature="e#12984#13776#0" expanded="true" />
+                <element signature="e#13775#13776#0" expanded="true" />
+                <element signature="e#15533#15751#0" expanded="true" />
+                <element signature="e#15750#15751#0" expanded="true" />
+                <element signature="e#15920#16136#0" expanded="true" />
+                <element signature="e#16135#16136#0" expanded="true" />
+                <element signature="e#16305#19884#0" expanded="true" />
+                <element signature="e#19883#19884#0" expanded="true" />
+                <element signature="e#20158#22098#0" expanded="true" />
+                <element signature="e#22097#22098#0" expanded="true" />
+                <element signature="e#25767#27187#0" expanded="true" />
+                <element signature="e#27186#27187#0" expanded="true" />
+                <element signature="e#27397#28320#0" expanded="true" />
+                <element signature="e#28319#28320#0" expanded="true" />
+                <element signature="e#28506#29248#0" expanded="true" />
+                <element signature="e#29247#29248#0" expanded="true" />
+                <element signature="e#29458#29980#0" expanded="true" />
+                <element signature="e#29979#29980#0" expanded="true" />
+                <element signature="e#31577#31891#0" expanded="true" />
+                <element signature="e#31890#31891#0" expanded="true" />
+                <element signature="e#32057#35837#0" expanded="true" />
+                <element signature="e#35836#35837#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,7 +143,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556554438476" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556555249862" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -192,12 +202,12 @@
       <option name="presentableId" value="Default" />
       <updated>1556137505265</updated>
       <workItem from="1556137513228" duration="1002000" />
-      <workItem from="1556553872115" duration="842000" />
+      <workItem from="1556553872115" duration="1354000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1844000" />
+    <option name="totallyTimeSpent" value="2356000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -209,10 +219,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18390192" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -221,7 +231,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19176598" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -312,8 +322,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EdgeConvertGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="1079" column="8" selection-start-line="1079" selection-start-column="8" selection-end-line="1080" selection-end-column="40" />
+        <state relative-caret-position="193">
+          <caret line="1165" column="10" selection-start-line="1165" selection-start-column="10" selection-end-line="1165" selection-end-column="10" />
+          <folding>
+            <element signature="e#8134#8442#0" expanded="true" />
+            <element signature="e#8441#8442#0" expanded="true" />
+            <element signature="e#8867#9807#0" expanded="true" />
+            <element signature="e#9806#9807#0" expanded="true" />
+            <element signature="e#9999#11904#0" expanded="true" />
+            <element signature="e#11903#11904#0" expanded="true" />
+            <element signature="e#12090#12850#0" expanded="true" />
+            <element signature="e#12849#12850#0" expanded="true" />
+            <element signature="e#12984#13776#0" expanded="true" />
+            <element signature="e#13775#13776#0" expanded="true" />
+            <element signature="e#15533#15751#0" expanded="true" />
+            <element signature="e#15750#15751#0" expanded="true" />
+            <element signature="e#15920#16136#0" expanded="true" />
+            <element signature="e#16135#16136#0" expanded="true" />
+            <element signature="e#16305#19884#0" expanded="true" />
+            <element signature="e#19883#19884#0" expanded="true" />
+            <element signature="e#20158#22098#0" expanded="true" />
+            <element signature="e#22097#22098#0" expanded="true" />
+            <element signature="e#25767#27187#0" expanded="true" />
+            <element signature="e#27186#27187#0" expanded="true" />
+            <element signature="e#27397#28320#0" expanded="true" />
+            <element signature="e#28319#28320#0" expanded="true" />
+            <element signature="e#28506#29248#0" expanded="true" />
+            <element signature="e#29247#29248#0" expanded="true" />
+            <element signature="e#29458#29980#0" expanded="true" />
+            <element signature="e#29979#29980#0" expanded="true" />
+            <element signature="e#31577#31891#0" expanded="true" />
+            <element signature="e#31890#31891#0" expanded="true" />
+            <element signature="e#32057#35837#0" expanded="true" />
+            <element signature="e#35836#35837#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
